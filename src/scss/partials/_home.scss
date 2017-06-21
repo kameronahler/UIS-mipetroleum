@@ -40,17 +40,16 @@ custom home intro block
 			line-height:18px;
 			@include bp(lg){
 				@include flex(center,center)
-				margin:0 0 $pad;
+				font-size:200%;
+				margin:$pad 0 $pad;
 				width:100%;
 				background:transparent;
 			}
 		}
 		p{
 			margin-bottom:2*$pad;
+			text-align:center;
 
-			@include bp(md){
-				text-align:center;
-			}
 			@include bp(lg){
 				color:#fff;
 				margin-bottom:3*$pad;
@@ -93,7 +92,7 @@ custom home intro block
 			// background:linear-gradient(0deg, #fff 50%,#{lighten($color-1,50%)} 50%);
 			background:linear-gradient(0deg, #fff 50%,$color-1 50%);
 			border-radius:4px;
-			box-shadow:$box-shadow-custom-home-img;
+			// box-shadow:$box-shadow-custom-home-img;
 		}
 	}
 
@@ -103,7 +102,7 @@ custom home intro block
 		h3{
 			text-align:center;
 			@include bp(lg){
-				padding:$pad $pad 0;
+				padding:$pad*2 $pad 0;
 				color:#fff;
 			}
 		}
@@ -125,7 +124,7 @@ custom home intro block
 			max-width:$max-width-custom-home__item--md - $pad * 2;
 			margin:0 auto 2*$pad;
 		}
-
+		
 		&::before{
 			display:block;
 			content:"";
