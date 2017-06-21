@@ -1,0 +1,105 @@
+//mixins
+@mixin bp($bp) {
+    // 320
+    @if $bp=='xs' {
+        @media screen and (min-width: 30em) {
+            @content
+        }
+    }
+
+    // 740
+    @elseif $bp=='md' {
+        @media screen and (min-width: 46.25em) {
+            @content
+        }
+    }
+
+    // 980
+    @elseif $bp=='lg' {
+        @media screen and (min-width: 61.25em) {
+            @content
+        }
+    }
+
+    @elseif $bp=='max-xs' {
+        @media screen and (max-width: 29.99em) {
+            @content
+        }
+    }
+    @elseif $bp=='max-md' {
+        @media screen and (max-width: 46.24em) {
+            @content
+        }
+    }
+    @elseif $bp=='max-lg' {
+        @media screen and (max-width: 61.24em) {
+            @content
+        }
+    }
+}
+
+// no cascade
+@mixin reset-box-sizing {
+    box-sizing: border-box;
+
+    &::before,
+    &::after {
+        box-sizing: inherit;
+    }
+}
+
+// no cascade
+@mixin reset-box-sizing-all {
+    box-sizing: border-box;
+
+    &::before,
+    &::after {
+        box-sizing: inherit;
+    }
+}
+
+@mixin flex($justify-content:null, $align-items:null, $align-content:null) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    align-content: $align-content;
+}
+
+
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin absolute ($top:null, $left:null, $right:null, $bottom:null) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+    @content;
+}
+
+@mixin hide{
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px); /* deprecated */
+    clip-path: polygon(0px 0px, 0px 0px,0px 0px, 0px 0px);
+    padding:0 !important;
+    border:0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+// required for ep accessibility partials
+@mixin font($px){
+    font-size:#{($px / 16)}rem;
+}
+
+@mixin font-family{
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+}

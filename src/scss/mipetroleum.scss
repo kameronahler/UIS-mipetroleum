@@ -1,0 +1,69 @@
+/* ================================
+
+Engaging Plans Styling Boilerplate
+
+==================================*/
+/* -----------------
+Mixins and Vars
+----------------- */
+@import "src/scss/partials/ep-mixins";
+@import "src/scss/partials/vars";
+
+
+
+/* -----------------
+Momentum scrolling not working on touch devices
+----------------- */
+@import "src/scss/partials/ep/momentum-scrolling/momentum-scrolling";
+
+
+
+/* -----------------
+Accessibility Concerns
+-----------------*/
+// Font scaling
+// @import "src/scss/partials/ep/fonts/global";
+// @import "src/scss/partials/ep/fonts/participate";
+// @import "src/scss/partials/ep/fonts/events";
+// @import "src/scss/partials/ep/fonts/contact";
+// @import "src/scss/partials/ep/fonts/open-question";
+
+// AA Color Contrast
+// @import "src/scss/partials/ep/colors/global";
+
+
+
+/* -----------------
+Brightpages 3.0
+-----------------*/
+// @import "src/scss/partials/ep/bp3/_01-base";
+// @import "src/scss/partials/ep/bp3/_02-layout";
+// @import "src/scss/partials/ep/bp3/_04-state";
+// @import "src/scss/partials/ep/bp3/_05-theme";
+
+// this has styles for bundles from DOLA but is left out by default
+// @import "partials/ep/bp3/_03-modules";
+
+
+
+/* -------------------
+Webform Page Styling
+---------------------- */
+// @import "src/scss/partials/ep/webforms/webforms";
+
+
+
+/* ----------------------------
+Webforms With Grid Questions
+------------------------------- */
+/* Fix for grid question type styling - especially mobile */
+// @import "src/scss/partials/ep/grid-questions/grid-questions";
+
+
+
+/* ================================
+
+Project Specific
+
+==================================*/
+@import "src/scss/partials/home";
